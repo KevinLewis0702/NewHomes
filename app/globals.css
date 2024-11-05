@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+/* It makes the HTML progress bar filling smooth when value change. */
+progress::-webkit-progress-value {
+  transition: 0.6s width ease-out;
+}
+
+@layer base {
+  .btn-gradient {
+    @apply !bg-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
+  }
+  .btn {
+    @apply !capitalize;
+  }
+}
+
+.bg-custom-header {
+  background-color: #1a1e33;
+}
+.bg-custom-header .link, .bg-custom-header .font-extrabold {
+  color: white;
+}
+
+.nav-link {
+  margin-right: 1rem; /* Adjust the value as needed */
+}
+
+.tabs-bordered .tab:not(.tab-active) {
+  border-bottom: none;
+}
+
+.menu a:focus {
+  background-color: inherit;
+  color: #4a00ff;
+}
